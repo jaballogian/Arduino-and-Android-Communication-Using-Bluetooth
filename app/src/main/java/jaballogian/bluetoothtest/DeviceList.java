@@ -1,11 +1,13 @@
 package jaballogian.bluetoothtest;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -18,11 +20,14 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Set;
 
+import me.anwarshahriar.calligrapher.Calligrapher;
+
 public class DeviceList extends AppCompatActivity {
 
     //widgets
     Button btnPaired;
     ListView devicelist;
+
     //Bluetooth
     private BluetoothAdapter myBluetooth = null;
     private Set<BluetoothDevice> pairedDevices;
@@ -32,7 +37,15 @@ public class DeviceList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_device_list);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+
+        Calligrapher calligrapher = new Calligrapher(this);
+        calligrapher.setFont(this, "PRODUCT_SANS.ttf", true);
 
         //Calling widgets
         btnPaired = (Button)findViewById(R.id.button);

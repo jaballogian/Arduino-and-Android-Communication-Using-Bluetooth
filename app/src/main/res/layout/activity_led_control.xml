@@ -6,56 +6,194 @@
     android:layout_height="match_parent"
     tools:context=".ledControl">
 
+    <ImageButton
+        android:id="@+id/disconnectButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/disconnect"
+        android:layout_margin="10dp"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LED Controller "
-        android:id="@+id/textView2"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="#ffffff"
-        android:textSize="20dp" />
+        android:layout_marginTop="128dp"
+        android:layout_marginRight="17dp"
+        android:layout_toLeftOf="@+id/robotArmImageView"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Body"
+        android:textColor="#000000"
+        android:textSize="20sp" />
 
-    <ImageButton
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/on"
-        android:background="@null"
-        android:src="@drawable/on"
-        android:layout_marginBottom="79dp"
-        android:layout_above="@+id/off"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="29dp"
+        android:layout_marginRight="-55dp"
+        android:layout_toLeftOf="@+id/robotArmImageView"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Shoulder"
+        android:textColor="#000000"
+        android:textSize="20sp" />
 
-    <ImageButton
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/off"
-        android:src="@drawable/red"
-        android:background="@null"
-        android:layout_above="@+id/discnt"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="38dp"
+        android:layout_marginRight="-232dp"
+        android:layout_toLeftOf="@+id/robotArmImageView"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Elbow"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="145dp"
+        android:layout_marginRight="-244dp"
+        android:layout_toLeftOf="@+id/robotArmImageView"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Fingers"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+
+    <ImageView
+        android:id="@+id/robotArmImageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/robotic_arm"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="153dp" />
+        android:layout_marginTop="30dp"/>
 
-    <ImageButton
+    <LinearLayout
+        android:id="@+id/bodyShoulderTextLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_above="@+id/bodyShoulderButtonLinearLayout"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Body"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Shoulder"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Elbow"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fingers"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bodyShoulderButtonLinearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/discnt"
-        android:src="@drawable/disconnect"
-        android:background="@null"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true">
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/abt"
-        android:background="@null"
-        android:onClick="about"
-        android:src="@drawable/about"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/arrow_left"
+        android:id="@+id/leftBodyButtonMainActivity"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp" />
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+        android:background="@drawable/arrow_right"
+        android:id="@+id/rightBodyButtonMainActivity"
+        android:layout_centerVertical="true" />
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/arrow_left"
+            android:id="@+id/leftShoulderButtonMainActivity"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/arrow_right"
+            android:id="@+id/rightShoulderButtonMainActivity"
+            android:layout_centerVertical="true" />
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/arrow_left"
+            android:id="@+id/leftElbowButtonMainActivity"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/arrow_right"
+            android:id="@+id/rightElbowButtonMainActivity"
+            android:layout_centerVertical="true" />
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/arrow_left"
+            android:id="@+id/leftFingersButtonMainActivity"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/arrow_right"
+            android:id="@+id/rightFingersButtonMainActivity"
+            android:layout_centerVertical="true" />
+    </LinearLayout>
 
 </RelativeLayout>

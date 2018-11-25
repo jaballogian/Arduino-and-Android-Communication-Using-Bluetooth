@@ -7,44 +7,72 @@
     tools:context=".DeviceList">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Paired Devices"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="#ffffff"
-        android:textIsSelectable="false" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Paired Devices"
-        android:id="@+id/button"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:background="#e75238" />
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Paired Device"
+        android:textColor="@color/defaultTextColor"
+        android:textSize="20sp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:id="@+id/pairedDeviceTextViewDeviceListActivity"/>
 
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/listView"
-        android:layout_below="@+id/textView"
-        android:layout_alignRight="@+id/imageView"
-        android:layout_alignEnd="@+id/imageView"
-        android:layout_above="@+id/button" />
+        android:layout_below="@+id/pairedDeviceTextViewDeviceListActivity"
+        android:layout_above="@+id/button"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:src="@drawable/cover"
-        android:layout_below="@+id/textView"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_toEndOf="@+id/textView" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/defaultRed"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/button"
+        android:text="Search"
+        android:textAllCaps="true"
+        android:textColor="#ffffff"
+        android:textSize="20sp"/>
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Paired Devices"-->
+        <!--android:id="@+id/textView"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:textIsSelectable="false" />-->
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Paired Devices"-->
+        <!--android:id="@+id/button"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:background="#e75238" />-->
+
+    <!--<ListView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/listView"-->
+        <!--android:layout_below="@+id/textView"-->
+        <!--android:layout_alignRight="@+id/imageView"-->
+        <!--android:layout_alignEnd="@+id/imageView"-->
+        <!--android:layout_above="@+id/button" />-->
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/imageView"-->
+        <!--android:src="@drawable/cover"-->
+        <!--android:layout_below="@+id/textView"-->
+        <!--android:layout_toRightOf="@+id/textView"-->
+        <!--android:layout_toEndOf="@+id/textView" />-->
 
 </RelativeLayout>
